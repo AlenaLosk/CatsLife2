@@ -1,0 +1,28 @@
+public class Plate {
+    int quantityOfFood;
+
+    Plate() {
+        quantityOfFood = 100;
+    }
+
+    Plate(int quantityOfFood) {
+        this.quantityOfFood = quantityOfFood;
+    }
+
+    public void setPlate(int quantityOfFood) {
+        this.quantityOfFood = quantityOfFood;
+    }
+
+    public int getPlate() {
+        System.out.println("Сейчас в тарелке осталось - " + quantityOfFood + " ед. еды");
+        return quantityOfFood;
+    }
+
+    void eat(int id) {
+        quantityOfFood -= id; // кошка съедает еды в соответствии со своим порядковым номером
+        if (quantityOfFood < 1) {
+            quantityOfFood = 0;
+            System.out.println("Еда закончилась!");
+        }
+    }
+}
