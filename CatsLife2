@@ -1,4 +1,4 @@
-public class CatsLife {
+public class CatsLife2 {
     public static void main(String[] args) {
         Cat laska = new Cat("Laska");
         Cat.showCount();
