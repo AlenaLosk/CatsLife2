@@ -1,0 +1,28 @@
+public class Bowl {
+    int quantityOfWater;
+
+    Bowl() {
+        quantityOfWater = 50;
+    }
+
+    Bowl(int quantityOfWater) {
+        this.quantityOfWater = quantityOfWater;
+    }
+
+    public void setBowl(int quantityOfWater) {
+        this.quantityOfWater = quantityOfWater;
+    }
+
+    public int getBowl() {
+        System.out.println("Сейчас в миске осталось - " + quantityOfWater + " ед. воды");
+        return quantityOfWater;
+    }
+
+    void drink(int id) {
+        quantityOfWater -= id * 2; // кошка выпивает воды в 2 раза больше, чем ее порядковый номер
+        if (quantityOfWater < 1) {
+            quantityOfWater = 0;
+            System.out.println("Вода закончилась!");
+        }
+    }
+}
