@@ -1,0 +1,28 @@
+public class CatsLife {
+    public static void main(String[] args) {
+        Cat laska = new Cat("Laska");
+        Cat.showCount();
+        laska.showNumber();
+        for (int i = 0; i < 10; i++) {
+            new Cat();
+        }
+        Cat murzik = new Cat("Murzik");
+        Cat.showCount();
+        laska.showNumber();
+        murzik.showNumber();
+        Bowl bowl = new Bowl(50);
+        Plate plate = new Plate();
+        plate.setPlate(100);
+        plate.eat(laska.id);
+        bowl.drink(laska.id);
+        bowl.getBowl();
+        plate.getPlate();
+        plate.eat(murzik.id);
+        plate.eat(murzik.id);
+        plate.getPlate();
+        bowl.drink(murzik.id);
+        bowl.drink(murzik.id);
+        bowl.drink(murzik.id);
+        bowl.getBowl();
+    }
+}
